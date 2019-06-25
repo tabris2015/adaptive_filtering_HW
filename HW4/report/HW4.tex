@@ -1,0 +1,72 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[utf8]{inputenc} % OJO!!!  => MANTENER ESTA LINEA PARA FACIL CONVERSION A WORD EN EL FUTURO ...
+% \usepackage[spanish]{babel}
+\usepackage{graphicx} 
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{amssymb, amsmath}
+
+% Paquetes extras ... 
+\usepackage{subfigure}
+\usepackage{color}
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,cancel,icomma,nicefrac,mathrsfs,
+            eurosym,verbatim,environ,ifthen,ifdraft,pdfpages,float,booktabs}
+\allowdisplaybreaks[1] 
+
+\usepackage{color}
+\definecolor{lstgrey}{rgb}{0.95,0.95,0.95}
+\usepackage{listings}
+\lstset{language=Matlab,
+       backgroundcolor=\color{lstgrey},
+       frame=single,
+       basicstyle=\footnotesize\ttfamily,
+       captionpos=b,
+       tabsize=2,
+  }
+
+\lstset{language=Matlab,%
+  %basicstyle=\color{red},
+  breaklines=true,%
+  morekeywords={matlab2tikz},
+  keywordstyle=\color{blue},%
+  morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+  identifierstyle=\color{black},%
+  stringstyle=\color{mylilas},
+  commentstyle=\color{mygreen},%
+  showstringspaces=false,%without this there will be a symbol in the places where there is a space
+  numbers=left,%
+  numberstyle={\tiny \color{black}},% size of the numbers
+  numbersep=9pt, % this defines how far the numbers are from the text
+  emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+  %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+\title{Asignment 4}
+\author{Jose Eduardo Laruta Espejo \\ Facultad de Ingeniería - Universidad Mayor de San Andrés}
+\begin{document}
+\maketitle
+\section{Problem 1}
+The completed code is as follows>
+
+\lstinputlisting[label={lst:code1}, caption={Code for Problem 1}]{../matlab/ee6543_assignment4_problem1.m}
+
+It is important to notice that, after a few trials, the forgetting factor $\lambda = 0.95$ has been the one with 
+the best results giving a final RLS error of -32 dB. the plots are shown in Fig \ref{fig:res}.
+
+\begin{figure}[!h] 
+  \centering
+  \includegraphics[width=1\textwidth]{../matlab/img/plots.png}
+  \caption{plots for RLS example ($\lambda = 0.95$)}
+  \label{fig:res}
+\end{figure}
+
+
+\end{document}

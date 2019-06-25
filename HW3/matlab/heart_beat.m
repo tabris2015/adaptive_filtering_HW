@@ -12,7 +12,7 @@ T = assignment3problem1data4 ;
 
 % filter coefficients
 mu         =  2^(-8) ;  % (-), LMS adaptation constant
-Npoints_w  =  2^6 ;  % (-), number of points in w
+Npoints_w  =  4 ;  % (-), number of points in w
 w = zeros(1, Npoints_w);
 xn  =  zeros(1,Npoints_w) ; 
 % LMS algorithm
